@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Andrea González | JS Full-Stack Dev & UX Designer`,
-    description: `Andrea González | JS Full-Stack Dev & UX Designer`,
+    description: `JS Full-Stack Dev & UX Designer`,
     author: `Andrea González`,
     social: {
         twitter: `https://twitter.com/andreagzz11`,
