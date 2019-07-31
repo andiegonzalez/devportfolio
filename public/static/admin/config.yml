@@ -1,10 +1,8 @@
 backend:
-  name: test-repo
+  name: github
   repo: andreagzz11/devportfolio
-
 media_folder: static/assets
 public_folder: assets
-
 collections:
   - name: blog
     label: Blog

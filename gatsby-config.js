@@ -35,7 +35,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
