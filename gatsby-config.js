@@ -11,6 +11,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [`400`, `700`, `800`],
+          },
+          {
+            family: `Roboto`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    }
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -21,14 +36,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/projects`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/blogs`,
+        path: `${__dirname}/blogs`,
       },
     },
     `gatsby-transformer-sharp`,

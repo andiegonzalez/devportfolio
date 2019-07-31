@@ -14,26 +14,30 @@ exports.createPages = ({ actions, graphql }) => {
   const blogPostTemplate = path.resolve(`src/templates/blogtemplate.js`)
 
   return graphql(`
-      {
-    projects: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/projects/**.md"}}) {
-      edges {
-        node {
-          frontmatter {
-            path
+    {
+      projects: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/projects/**.md" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      blogs: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/blogs/**.md" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
           }
         }
       }
     }
-    blogs: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/blogs/**.md"}}) {
-      edges {
-        node {
-          frontmatter {
-            path
-          }
-        }
-      }
-    }
-  }
   `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)

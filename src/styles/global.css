@@ -1,3 +1,22 @@
+.label {
+}
+
+.input {
+  @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight;
+}
+
+.profile-image {
+  position: relative;
+  max-width: 200px;
+}
+.profile-image::after {
+  content: "";
+  top: 1em;
+  left: 1em;
+  right: -1em;
+  bottom: -1em;
+  @apply absolute border-8 border-solid border-purple-700;
+}
 @tailwind base;
 
 @tailwind components;

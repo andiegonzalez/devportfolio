@@ -11,8 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Social from "./social"
-import "./layout.css"
-import "../styles/global.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,11 +32,10 @@ const Layout = ({ children }) => {
         siteAuthor={data.site.siteMetadata.author}
       />
       <div
+        className="p-4"
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
         }}
       >
         <main>{children}</main>

@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -61,6 +61,7 @@ dfn {
   font-style: italic;
 }
 h1 {
+  font-family: "Poppins";
   font-size: 2em;
   margin: 0.67em 0;
 }

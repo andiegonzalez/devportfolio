@@ -1,7 +1,19 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        display: ["Poppins", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+      },
+    },
   },
-  variants: {},
-  plugins: []
+  variants: [
+    "responsive",
+    "group-hover",
+    "focus-within",
+    "hover",
+    "focus",
+    "active",
+  ],
+  plugins: [],
 }
