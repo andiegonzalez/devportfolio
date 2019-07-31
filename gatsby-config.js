@@ -4,9 +4,9 @@ module.exports = {
     description: `JS Full-Stack Dev & UX Designer`,
     author: `Andrea González`,
     social: {
-        twitter: `https://twitter.com/andreagzz11`,
-        github: `http://github.com/andreagzz11`,
-    }
+      twitter: `https://twitter.com/andreagzz11`,
+      github: `http://github.com/andreagzz11`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,6 +34,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-netlify-cms`
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
