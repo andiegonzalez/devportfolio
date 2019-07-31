@@ -5,3 +5,52 @@
  */
 
 // You can delete this file if you're not using it
+const path = require(`path`)
+
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const projectsTemplate = path.resolve(`src/templates/projectpage.js`)
+  const blogPostTemplate = path.resolve(`src/templates/blogtemplate.js`)
+
+  return graphql(`
+      {
+    projects: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/projects/**.md"}}) {
+      edges {
+        node {
+          frontmatter {
+            path
+          }
+        }
+      }
+    }
+    blogs: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/blogs/**.md"}}) {
+      edges {
+        node {
+          frontmatter {
+            path
+          }
+        }
+      }
+    }
+  }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+    result.data.projects.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: projectsTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
+    result.data.blogs.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
+  })
+}
