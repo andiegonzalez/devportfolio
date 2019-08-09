@@ -11,22 +11,38 @@ import SEO from "../components/seo"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query projectsInfo {
-      allMarkdownRemark(limit: 2) {
+    query contentInfo {
+      projects: allMarkdownRemark(
+        filter: { frontmatter: { path: { glob: "/projects/**" } } }
+        limit: 2
+      ) {
         nodes {
           id
           frontmatter {
             date
             title
             path
-            description
-            demo
+          }
+        }
+      }
+      posts: allMarkdownRemark(
+        filter: { frontmatter: { path: { glob: "/blog/**" } } }
+        limit: 2
+      ) {
+        nodes {
+          id
+          frontmatter {
+            date
+            title
+            path
           }
         }
       }
     }
   `)
-  const projects = data.allMarkdownRemark.nodes
+  const projects = data.projects.nodes
+  const posts = data.posts.nodes
+  // const projects = data.allMarkdownRemark.nodes
   return (
     <Layout>
       <SEO title="Home" />
@@ -36,10 +52,10 @@ const IndexPage = () => {
       >
         <Image className="profile-image" />
         <div className="inline-block">
-          <h1 className="site-title text-purple-700 font-extrabold">
+          <h1 className="text-6xl text-purple-700 font-extrabold">
             Hey, Andie here!
           </h1>
-          <p className="my-2 text-2xl">
+          <p className="my-2 text-xl">
             I love making beautiful, usable, accessible products, and cats.
           </p>
           <p className="my-2 text-xl">
@@ -47,23 +63,26 @@ const IndexPage = () => {
             technologies including Vuejs, React, Express, HTML, CSS and vanilla
             JS.
           </p>
-          <p className="my-2 text-xl">Get in contact with me!</p>
+          <p className="my-2 text-2xl">Get in contact with me!</p>
           <Social color="text-purple-700" />
         </div>
       </section>
-      <section className="mt-8">
-        <p className="text-2xl text-right">
+      <section className="py-16">
+        <p className="text-xl text-right">
           I’ve worked in a couple of personal, freelance and work projects.
         </p>
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gridGap: "0.5rem",
+            gridGap: "1rem",
           }}
         >
           {projects.map(project => (
-            <Card project={project} key={project.id} />
+            <Card content={project} key={project.id} orientation="horizontal" />
+          ))}
+          {posts.map(post => (
+            <Card content={post} key={post.id} orientation="vertical" />
           ))}
         </div>
       </section>
