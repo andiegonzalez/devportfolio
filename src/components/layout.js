@@ -31,16 +31,10 @@ const Layout = ({ children }) => {
         siteDescription={data.site.siteMetadata.description}
         siteAuthor={data.site.siteMetadata.author}
       />
-      <div
-        className="p-4"
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-        }}
-      >
-        <main>{children}</main>
+      <div>
+        <main className="p-4 my-0 mx-auto max-w-4xl">{children}</main>
         <footer
-          className="bg-indigo-500"
+          className="bg-purple-700"
           style={{
             padding: `1em`,
             display: `flex`,
@@ -48,10 +42,10 @@ const Layout = ({ children }) => {
             alignContent: `center`,
           }}
         >
-          <p>
+          <p className="text-white">
             {data.site.siteMetadata.title} | {new Date().getFullYear()}
           </p>
-          <Social />
+          <Social color="text-white" />
         </footer>
       </div>
     </>

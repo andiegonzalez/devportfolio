@@ -6,6 +6,7 @@ module.exports = {
     social: {
       twitter: `https://twitter.com/andreagzz11`,
       github: `http://github.com/andreagzz11`,
+      dev: `https://dev.to/andreagzz11`,
     },
   },
   plugins: [
@@ -20,11 +21,11 @@ module.exports = {
           },
           {
             family: `Roboto`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
         ],
       },
-    }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

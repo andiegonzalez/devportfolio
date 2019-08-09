@@ -1,7 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTwitter, faGithub, faDev } from "@fortawesome/free-brands-svg-icons"
 
-const Social = () => {
+const Social = ({ color }) => {
   const data = useStaticQuery(graphql`
     query SocialsQuery {
       site {
@@ -9,25 +11,29 @@ const Social = () => {
           social {
             twitter
             github
+            dev
           }
         }
       }
     }
   `)
   return (
-    <div>
+    <div className={color}>
       <a
+        className="text-3xl"
         style={{
           textDecoration: `none`,
           margin: `0 0.5em`,
+          display: `inline-block`,
         }}
         target="_blank"
         rel="noopener noreferrer"
         href={data.site.siteMetadata.social.twitter}
       >
-        Twitter
+        <FontAwesomeIcon icon={faTwitter} />
       </a>
       <a
+        className="text-3xl"
         style={{
           textDecoration: `none`,
           margin: `0 0.5em`,
@@ -36,7 +42,19 @@ const Social = () => {
         rel="noopener noreferrer"
         href={data.site.siteMetadata.social.github}
       >
-        Github
+        <FontAwesomeIcon icon={faGithub} />
+      </a>
+      <a
+        className="text-3xl"
+        style={{
+          textDecoration: `none`,
+          margin: `0 0.5em`,
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={data.site.siteMetadata.social.dev}
+      >
+        <FontAwesomeIcon icon={faDev} />
       </a>
     </div>
   )

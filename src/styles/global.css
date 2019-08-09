@@ -5,9 +5,15 @@
   @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight;
 }
 
+.site-title {
+  font-size: 4em;
+  font-weight: 800;
+}
+
 .profile-image {
   position: relative;
   max-width: 200px;
+  border-radius: 10px;
 }
 .profile-image::after {
   content: "";
@@ -15,7 +21,8 @@
   left: 1em;
   right: -1em;
   bottom: -1em;
-  @apply absolute border-8 border-solid border-purple-700;
+  border-radius: 10px;
+  @apply absolute border-4 border-solid border-purple-700;
 }
 @tailwind base;
 
