@@ -1,14 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 const Card = ({ content, orientation, btnText }) => {
   const demo = content.frontmatter.demo
   return (
     <div
+      onClick={event => {
+        event.persist()
+        if (event.target.nodeName !== "A") {
+          navigate(content.frontmatter.path)
+        }
+      }}
       className={
         orientation === "horizontal"
-          ? "shadow bg-white rounded h-64"
-          : "shadow bg-white rounded h-72"
+          ? "cursor-pointer shadow bg-white rounded h-64"
+          : "cursor-pointer shadow bg-white rounded h-72"
       }
       style={{
         display: "grid",

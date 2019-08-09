@@ -1,12 +1,12 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Projects from "../components/projects"
 import Image from "../components/image"
 import ContactForm from "../components/contactform"
 import Social from "../components/social"
 import Card from "../components/card"
+import Subscribe from "../components/subscribe"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -45,7 +45,6 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data)
   const projects = data.projects.nodes
   const posts = data.posts.nodes
   // const projects = data.allMarkdownRemark.nodes
@@ -119,6 +118,9 @@ const IndexPage = () => {
             />
           ))}
         </div>
+      </section>
+      <section className="py-8">
+        <Subscribe />
       </section>
       <section className="py-8">
         <ContactForm />
