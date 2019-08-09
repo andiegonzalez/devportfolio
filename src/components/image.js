@@ -30,8 +30,7 @@ const Image = () => {
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
       alt=""
-      style={{ overflow: "visible" }}
-      className="profile-image"
+      className="h-70"
     />
   )
 }

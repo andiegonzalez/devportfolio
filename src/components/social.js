@@ -17,10 +17,15 @@ const Social = ({ color }) => {
       }
     }
   `)
+  const colorClass = color === "purple" ? "text-purple-700" : "text-white"
+  const hoverClass =
+    color === "purple" ? "hover:text-purple-900" : "hover:text-gray-200"
+  const focusClass =
+    color === "purple" ? "focus:border-purple-700" : "focus:border-white"
   return (
-    <div className={color}>
+    <div className={colorClass}>
       <a
-        className="text-3xl"
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass}`}
         style={{
           textDecoration: `none`,
           margin: `0 0.5em`,
@@ -33,7 +38,7 @@ const Social = ({ color }) => {
         <FontAwesomeIcon icon={faTwitter} />
       </a>
       <a
-        className="text-3xl"
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass}`}
         style={{
           textDecoration: `none`,
           margin: `0 0.5em`,
@@ -45,7 +50,7 @@ const Social = ({ color }) => {
         <FontAwesomeIcon icon={faGithub} />
       </a>
       <a
-        className="text-3xl"
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass}`}
         style={{
           textDecoration: `none`,
           margin: `0 0.5em`,

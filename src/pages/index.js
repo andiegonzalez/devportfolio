@@ -22,12 +22,15 @@ const IndexPage = () => {
             date
             title
             path
+            description
+            demo
+            thumb
           }
         }
       }
       posts: allMarkdownRemark(
         filter: { frontmatter: { path: { glob: "/blog/**" } } }
-        limit: 2
+        limit: 3
       ) {
         nodes {
           id
@@ -35,11 +38,14 @@ const IndexPage = () => {
             date
             title
             path
+            description
+            thumb
           }
         }
       }
     }
   `)
+  console.log(data)
   const projects = data.projects.nodes
   const posts = data.posts.nodes
   // const projects = data.allMarkdownRemark.nodes
@@ -47,11 +53,11 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <section
-        className=""
+        className="py-8"
         style={{ display: "grid", gridTemplateColumns: "1fr 2fr" }}
       >
-        <Image className="profile-image" />
-        <div className="inline-block">
+        <Image />
+        <div className="inline-block ml-12">
           <h1 className="text-6xl text-purple-700 font-extrabold">
             Hey, Andie here!
           </h1>
@@ -63,15 +69,18 @@ const IndexPage = () => {
             technologies including Vuejs, React, Express, HTML, CSS and vanilla
             JS.
           </p>
-          <p className="my-2 text-2xl">Get in contact with me!</p>
-          <Social color="text-purple-700" />
+          <div className="flex justify-between">
+            <p className="my-2 text-2xl">Get in touch!</p>
+            <Social color="purple" className="mr-8" />
+          </div>
         </div>
       </section>
-      <section className="py-16">
+      <section className="py-8">
         <p className="text-xl text-right">
           I’ve worked in a couple of personal, freelance and work projects.
         </p>
         <div
+          className="my-10"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -79,16 +88,41 @@ const IndexPage = () => {
           }}
         >
           {projects.map(project => (
-            <Card content={project} key={project.id} orientation="horizontal" />
-          ))}
-          {posts.map(post => (
-            <Card content={post} key={post.id} orientation="vertical" />
+            <Card
+              content={project}
+              key={project.id}
+              orientation="horizontal"
+              btnText="Live Demo"
+            />
           ))}
         </div>
       </section>
-      <Link to="/contact">Let's Talk</Link>
-      <Projects></Projects>
-      <ContactForm></ContactForm>
+      <section className="py-8">
+        <p className="text-xl">
+          I also write to help other developers and designers create awesome
+          things.
+        </p>
+        <div
+          className="my-10"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gridGap: "1rem",
+          }}
+        >
+          {posts.map(post => (
+            <Card
+              content={post}
+              key={post.id}
+              orientation="vertical"
+              btnText="Read More"
+            />
+          ))}
+        </div>
+      </section>
+      <section className="py-8">
+        <ContactForm />
+      </section>
     </Layout>
   )
 }

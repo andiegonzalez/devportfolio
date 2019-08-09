@@ -32,20 +32,12 @@ const Layout = ({ children }) => {
         siteAuthor={data.site.siteMetadata.author}
       />
       <div>
-        <main className="p-4 my-0 mx-auto max-w-4xl">{children}</main>
-        <footer
-          className="bg-purple-700"
-          style={{
-            padding: `1em`,
-            display: `flex`,
-            justifyContent: `space-between`,
-            alignContent: `center`,
-          }}
-        >
+        <main className="p-4 my-0 mx-auto max-w-5xl">{children}</main>
+        <footer className="bg-purple-700 p-4 flex justify-between items-center">
           <p className="text-white">
             {data.site.siteMetadata.title} | {new Date().getFullYear()}
           </p>
-          <Social color="text-white" />
+          <Social color="white" />
         </footer>
       </div>
     </>
