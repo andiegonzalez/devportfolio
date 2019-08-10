@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Subscribe from "../components/subscribe"
 import SEO from "../components/seo"
 
 export default function Template({ data }) {
