@@ -13,7 +13,7 @@ const ContactForm = () => {
       <form
         className="flex max-w-lg mx-auto my-0"
         name="contactForm"
-        method="post"
+        method="POST"
         netlify-honeypot="bot-field"
         data-netlify="true"
         style={{ flexDirection: "column" }}
@@ -22,32 +22,35 @@ const ContactForm = () => {
         <div>
           <label className="" htmlFor="name">
             Name
+            <input
+              className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
+              type="text"
+              id="name"
+              name="name"
+            />
           </label>
-          <input
-            className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
-            type="text"
-            id="name"
-          />
         </div>
         <div>
           <label className="" htmlFor="email">
             Email
+            <input
+              className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
+              type="text"
+              id="email"
+              name="email"
+            />
           </label>
-          <input
-            className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
-            type="text"
-            id="email"
-          />
         </div>
         <div>
           <label className="" htmlFor="message">
             Message
+            <textarea
+              className="input focus:outline-none focus:bg-white focus:border-purple-700 resize-none mb-4"
+              id="message"
+              rows="6"
+              name="message"
+            ></textarea>
           </label>
-          <textarea
-            className="input focus:outline-none focus:bg-white focus:border-purple-700 resize-none mb-4"
-            id="message"
-            rows="6"
-          ></textarea>
         </div>
         <button
           type="submit"

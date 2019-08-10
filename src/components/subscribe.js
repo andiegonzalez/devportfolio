@@ -6,7 +6,7 @@ const Subscribe = () => (
       If you enjoy what I write, feel free to leave your email below to get
       updates whenever I post!
     </p>
-    <label for="email">Email</label>
+    <label htmlFor="email">Email</label>
     <div className="flex">
       <input
         type="email"
