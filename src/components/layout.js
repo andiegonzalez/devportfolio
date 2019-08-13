@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Header from "./header"
 import Social from "./social"

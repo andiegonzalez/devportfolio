@@ -25,10 +25,9 @@ const Social = ({ color }) => {
   return (
     <div className={colorClass}>
       <a
-        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass}`}
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass} md:mx-2`}
         style={{
           textDecoration: `none`,
-          margin: `0 0.5em`,
           display: `inline-block`,
         }}
         target="_blank"
@@ -38,10 +37,9 @@ const Social = ({ color }) => {
         <FontAwesomeIcon icon={faTwitter} />
       </a>
       <a
-        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass}`}
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass} md:mx-2`}
         style={{
           textDecoration: `none`,
-          margin: `0 0.5em`,
         }}
         target="_blank"
         rel="noopener noreferrer"
@@ -50,10 +48,9 @@ const Social = ({ color }) => {
         <FontAwesomeIcon icon={faGithub} />
       </a>
       <a
-        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass}`}
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass} md:mx-2`}
         style={{
           textDecoration: `none`,
-          margin: `0 0.5em`,
         }}
         target="_blank"
         rel="noopener noreferrer"

@@ -12,7 +12,7 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={frontmatter.title} />
       <div>
-        <h1 className="text-5xl text-purple-700 font-extrabold">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold">
           {frontmatter.title}
         </h1>
         <h2 className="mb-4">{frontmatter.date}</h2>

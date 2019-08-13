@@ -51,13 +51,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <section
-        className="py-8"
-        style={{ display: "grid", gridTemplateColumns: "1fr 2fr" }}
-      >
+      <section className="md:py-8 p-0 hero">
         <Image />
-        <div className="inline-block ml-12">
-          <h1 className="text-6xl text-purple-700 font-extrabold">
+        <div className="inline-block md:ml-12">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl text-purple-700 font-extrabold">
             Hey, Andie here!
           </h1>
           <p className="my-2 text-xl">
@@ -68,9 +65,9 @@ const IndexPage = () => {
             technologies including Vuejs, React, Express, HTML, CSS and vanilla
             JS.
           </p>
-          <div className="flex justify-between">
-            <p className="my-2 text-2xl">Get in touch!</p>
-            <Social color="purple" className="mr-8" />
+          <div className="flex sm:justify-between">
+            <p className="mr-3 my-2 text-2xl">Get in touch!</p>
+            <Social color="purple" />
           </div>
         </div>
       </section>
@@ -79,10 +76,10 @@ const IndexPage = () => {
           I’ve worked in a couple of personal, freelance and work projects.
         </p>
         <div
-          className="my-10"
+          className="sm:my-10"
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
             gridGap: "1rem",
           }}
         >
@@ -102,10 +99,10 @@ const IndexPage = () => {
           things.
         </p>
         <div
-          className="my-10"
+          className="sm:my-10"
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
             gridGap: "1rem",
           }}
         >

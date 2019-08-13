@@ -1,3 +1,4 @@
 body {
-  @apply font-body bg-orange-100;
+  @apply font-body;
+  background-color: #fffdfa;
 }

@@ -7,7 +7,7 @@ const ContactForm = () => {
         Got an interesting project? Want to work together? Want to show me cat
         pictures?
       </p>
-      <h2 className="text-6xl text-purple-700 font-extrabold text-center">
+      <h2 className="text-2xl md:text-4xl lg:text-6xl text-purple-700 font-extrabold text-center">
         Let's Talk!
       </h2>
       <form
@@ -23,7 +23,7 @@ const ContactForm = () => {
           <label className="" htmlFor="name">
             Name
             <input
-              className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
+              className="input focus:outline-none focus:bg-white focus:border-yellow-700 mb-4"
               type="text"
               id="name"
               name="name"
@@ -34,7 +34,7 @@ const ContactForm = () => {
           <label className="" htmlFor="email">
             Email
             <input
-              className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
+              className="input focus:outline-none focus:bg-white focus:border-yellow-700 mb-4"
               type="text"
               id="email"
               name="email"
@@ -45,7 +45,7 @@ const ContactForm = () => {
           <label className="" htmlFor="message">
             Message
             <textarea
-              className="input focus:outline-none focus:bg-white focus:border-purple-700 resize-none mb-4"
+              className="input focus:outline-none focus:bg-white focus:border-yellow-700 resize-none mb-4"
               id="message"
               rows="6"
               name="message"
@@ -54,7 +54,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="rounded bg-purple-700 text-white py-1 px-4 mb-2 mr-2 hover:bg-purple-900 focus:outline-none focus:bg-purple-900"
+          className="rounded bg-yellow-400 text-yellow-900 py-1 px-4 mb-2 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500"
         >
           Send
         </button>

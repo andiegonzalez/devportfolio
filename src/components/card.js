@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Card = ({ content, orientation, btnText }) => {
   const demo = content.frontmatter.demo
@@ -13,8 +14,8 @@ const Card = ({ content, orientation, btnText }) => {
       }}
       className={
         orientation === "horizontal"
-          ? "cursor-pointer shadow bg-white rounded h-64"
-          : "cursor-pointer shadow bg-white rounded h-72"
+          ? "cursor-pointer shadow bg-white rounded h-64 max-w-full"
+          : "cursor-pointer shadow bg-white rounded h-72 max-w-full"
       }
       style={{
         display: "grid",
@@ -34,7 +35,9 @@ const Card = ({ content, orientation, btnText }) => {
       <h3 className="p-4 font-semibold">{content.frontmatter.title}</h3>
       <p className="p-4">{content.frontmatter.description}</p>
       {!demo ? (
-        <Link
+        <AniLink
+          paintDrip
+          color="rebeccapurple"
           style={{
             justifySelf: "end",
           }}
@@ -42,7 +45,7 @@ const Card = ({ content, orientation, btnText }) => {
           to={content.frontmatter.path}
         >
           {btnText}
-        </Link>
+        </AniLink>
       ) : (
         <a
           style={{

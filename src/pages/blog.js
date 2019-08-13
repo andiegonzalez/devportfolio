@@ -9,7 +9,7 @@ const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query blogInfo {
       allMarkdownRemark(
-        filter: { frontmatter: { path: { glob: "/projects/**" } } }
+        filter: { frontmatter: { path: { glob: "/blog/**" } } }
       ) {
         nodes {
           id
@@ -27,9 +27,11 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1 className="text-5xl text-purple-700 font-extrabold">Blog</h1>
+      <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold">
+        Blog
+      </h1>
       <section className="py-8">
-        <p className="text-xl text-right">
+        <p className="text-lg sm:text-xl text-right">
           I also write to help other developers and designers create awesome
           things.
         </p>
@@ -37,7 +39,7 @@ const BlogPage = () => {
           className="my-10"
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
             gridGap: "1rem",
           }}
         >

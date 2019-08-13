@@ -30,7 +30,7 @@ const Image = () => {
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
       alt=""
-      className="h-70"
+      className="h-70 sm:block hidden"
     />
   )
 }
