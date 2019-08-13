@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import Logo from "./Logo"
+import Logo from "./logo"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = ({ siteDescription, siteAuthor }) => (
