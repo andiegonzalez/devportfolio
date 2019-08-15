@@ -10,8 +10,6 @@ repo: '-'
 demo: '-'
 thumb: /assets/screen-shot-2019-08-15-at-4.33.12-pm.png
 ---
-\##Title
-
 **Proyected Stage** is a project management platform designed and implemented by **Proyected**, a Mexican business development company for which I've been working almost full time since October 2018 as a Frontend Developer and UI/UX Designer. 
 
 Project Goal:
