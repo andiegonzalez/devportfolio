@@ -55,15 +55,15 @@ const IndexPage = () => {
         <Image />
         <div className="inline-block md:ml-12">
           <h1 className="text-2xl md:text-4xl lg:text-6xl text-purple-700 font-extrabold">
-            Hey, Andie here!
+            Hola, soy Andrea!
           </h1>
           <p className="my-2 text-xl">
-            I love making beautiful, usable, accessible products, and cats.
+            Me encanta hacer productos usables, accesibles, bonitos y los gatos.
           </p>
           <p className="my-2 text-xl">
-            I have experience developing full stack JavaScript applications with
-            several technologies including Vuejs, React, Express, HTML, CSS and
-            vanilla JS.
+            My expertise is full stack JavaScript applications with several
+            technologies including Vuejs, React, Express, HTML, CSS and vanilla
+            JS.
           </p>
           <div className="flex sm:justify-between">
             <p className="mr-3 my-2 text-2xl">Get in touch!</p>
