@@ -6,6 +6,7 @@ const Card = ({ content, orientation, btnText }) => {
   const demo = content.frontmatter.demo
   return (
     <div
+      tabIndex="0"
       onClick={event => {
         event.persist()
         if (event.target.nodeName !== "A") {
@@ -14,8 +15,8 @@ const Card = ({ content, orientation, btnText }) => {
       }}
       className={
         orientation === "horizontal"
-          ? "cursor-pointer shadow bg-white rounded h-64 max-w-full"
-          : "cursor-pointer shadow bg-white rounded h-72 max-w-full"
+          ? "cursor-pointer shadow bg-white rounded h-64 max-w-full border-2 border-transparent focus:outline-none focus:border-purple-700"
+          : "cursor-pointer shadow bg-white rounded h-72 max-w-full border-2 border-transparent focus:outline-none focus:border-purple-700"
       }
       style={{
         display: "grid",
@@ -41,7 +42,7 @@ const Card = ({ content, orientation, btnText }) => {
           style={{
             justifySelf: "end",
           }}
-          className="rounded bg-purple-700 text-white py-1 px-4 mb-2 mr-2 hover:bg-purple-900 focus:outline-none focus:bg-purple-900"
+          className="rounded bg-purple-300 text-purple-900 font-bold py-1 px-4 mb-2 mr-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
           to={content.frontmatter.path}
         >
           {btnText}
@@ -51,7 +52,7 @@ const Card = ({ content, orientation, btnText }) => {
           style={{
             justifySelf: "end",
           }}
-          className="rounded bg-purple-700 text-white py-1 px-4 mb-2 mr-2 hover:bg-purple-900 focus:outline-none focus:bg-purple-900"
+          className="rounded bg-purple-300 text-purple-900 font-bold py-1 px-4 mb-2 mr-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
           target="_blank"
           rel="noopener noreferrer"
           href={content.frontmatter.demo}

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo"
+import Logo2 from "./logo0"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = ({ siteDescription, siteAuthor }) => (
@@ -12,7 +13,7 @@ const Header = ({ siteDescription, siteAuthor }) => (
       className="md:ml-5 m-0 p-1 border-2 border-transparent focus:outline-none focus:border-purple-700"
       style={{ maxWidth: `13rem` }}
     >
-      <Logo />
+      <Logo2 />
     </AniLink>
     <div>
       <AniLink
@@ -31,6 +32,10 @@ const Header = ({ siteDescription, siteAuthor }) => (
       >
         blog
       </AniLink>
+      {/*<div className="flex flex-col">
+        <a href="">ENG</a>
+        <a href="">ESP</a>
+      </div>*/}
     </div>
   </header>
 )

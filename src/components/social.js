@@ -30,6 +30,7 @@ const Social = ({ color }) => {
           textDecoration: `none`,
           display: `inline-block`,
         }}
+        aria-label="Link to my Twitter profile"
         target="_blank"
         rel="noopener noreferrer"
         href={data.site.siteMetadata.social.twitter}
@@ -42,6 +43,7 @@ const Social = ({ color }) => {
           textDecoration: `none`,
         }}
         target="_blank"
+        aria-label="Link to my Github profile"
         rel="noopener noreferrer"
         href={data.site.siteMetadata.social.github}
       >
@@ -53,6 +55,7 @@ const Social = ({ color }) => {
           textDecoration: `none`,
         }}
         target="_blank"
+        aria-label="Link to my Dev profile"
         rel="noopener noreferrer"
         href={data.site.siteMetadata.social.dev}
       >

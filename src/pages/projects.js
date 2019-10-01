@@ -28,13 +28,10 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold text-center">
         Projects
       </h1>
       <section className="py-8">
-        <p className="text-lg sm:text-xl text-right">
-          I’ve worked in a couple of personal, freelance and work projects.
-        </p>
         <div
           className="my-10"
           style={{

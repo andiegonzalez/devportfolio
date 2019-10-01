@@ -10,12 +10,12 @@ const Subscribe = () => (
     <div className="flex">
       <input
         type="email"
-        className="input focus:outline-none focus:bg-white focus:border-yellow-700"
+        className="input focus:outline-none focus:bg-white focus:border-purple-700"
         id="email"
       />
       <button
         type="submit"
-        className="rounded bg-yellow-400 text-yellow-900 py-1 px-4 ml-2 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500"
+        className="rounded bg-purple-300 text-purple-900 font-bold py-1 px-4 ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
       >
         Subscribe
       </button>

@@ -23,7 +23,7 @@ const ContactForm = () => {
           <label className="" htmlFor="name">
             Name
             <input
-              className="input focus:outline-none focus:bg-white focus:border-yellow-700 mb-4"
+              className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
               type="text"
               id="name"
               name="name"
@@ -34,7 +34,7 @@ const ContactForm = () => {
           <label className="" htmlFor="email">
             Email
             <input
-              className="input focus:outline-none focus:bg-white focus:border-yellow-700 mb-4"
+              className="input focus:outline-none focus:bg-white focus:border-purple-700 mb-4"
               type="text"
               id="email"
               name="email"
@@ -45,7 +45,7 @@ const ContactForm = () => {
           <label className="" htmlFor="message">
             Message
             <textarea
-              className="input focus:outline-none focus:bg-white focus:border-yellow-700 resize-none mb-4"
+              className="input focus:outline-none focus:bg-white focus:border-purple-700 resize-none mb-4"
               id="message"
               rows="6"
               name="message"
@@ -54,7 +54,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="rounded bg-yellow-400 text-yellow-900 py-1 px-4 mb-2 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500"
+          className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 mb-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
         >
           Send
         </button>

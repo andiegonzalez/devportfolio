@@ -8,6 +8,7 @@ import Social from "../components/social"
 import Card from "../components/card"
 import Subscribe from "../components/subscribe"
 import SEO from "../components/seo"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -58,13 +59,21 @@ const IndexPage = () => {
             Hey, Andie here!
           </h1>
           <p className="my-2 text-xl">
-            I love making beautiful, usable, accessible products, and cats.
+            I enjoy making usable, accessible, beautiful products, and cats.
           </p>
           <p className="my-2 text-xl">
-            My expertise is full stack JavaScript applications with several
+            I develop full stack JavaScript applications with several
             technologies including Vuejs, React, Express, HTML, CSS and vanilla
-            JS.
+            JS, concentrating more on the front of the front-end.{" "}
+            <a
+              href="https://drive.google.com/open?id=1BuRVceGGXAZhZ1xpbsAghaYFWCpSt4YO"
+              target="_blank"
+              className="border-2 border-transparent focus:outline-none focus:border-purple-700 text-sm md:text-xl text-purple-700 hover:text-purple-900"
+            >
+              See my resume.
+            </a>
           </p>
+
           <div className="flex sm:justify-between">
             <p className="mr-3 my-2 text-2xl">Get in touch!</p>
             <Social color="purple" />
@@ -72,9 +81,7 @@ const IndexPage = () => {
         </div>
       </section>
       <section className="py-8">
-        <p className="text-xl text-right">
-          I’ve worked in a couple of personal, freelance and work projects.
-        </p>
+        <p className="text-xl">Some projects I've worked on.</p>
         <div
           className="sm:my-10"
           style={{
@@ -94,9 +101,9 @@ const IndexPage = () => {
         </div>
       </section>
       <section className="py-8">
-        <p className="text-xl">
-          I also write to help other developers and designers create awesome
-          things.
+        <p className="text-xl w-3/4">
+          I'm also getting into the habit of writing with the goal of
+          documenting my goals and progress and helping others.
         </p>
         <div
           className="sm:my-10"

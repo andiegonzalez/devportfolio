@@ -27,14 +27,10 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold text-center">
         Blog
       </h1>
       <section className="py-8">
-        <p className="text-lg sm:text-xl text-right">
-          I also write to help other developers and designers create awesome
-          things.
-        </p>
         <div
           className="my-10"
           style={{
