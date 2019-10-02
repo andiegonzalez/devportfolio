@@ -31,7 +31,7 @@ const ProjectsPage = () => {
       <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold text-center">
         Projects
       </h1>
-      <section className="sm:py-8">
+      <section>
         <div
           className="my-10"
           style={{

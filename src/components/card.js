@@ -28,7 +28,7 @@ const Card = ({ content, orientation, btnText }) => {
         }`}
       ></div>
       <div
-        className={`flex flex-col justify-between ${
+        className={`flex flex-col justify-between h-48 ${
           orientation === "horizontal" ? "" : "sm:w-1/2"
         }`}
       >
