@@ -30,7 +30,7 @@ const BlogPage = () => {
       <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold text-center">
         Blog
       </h1>
-      <section className="py-8">
+      <section className="sm:py-8">
         <div
           className="my-10"
           style={{

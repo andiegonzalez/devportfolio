@@ -11,12 +11,12 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div>
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold">
           {frontmatter.title}
         </h1>
-        <h2 className="mb-4">{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <h2 className="mb-4 -mt-2">{frontmatter.date}</h2>
+        <div dangerouslySetInnerHTML={{ __html: html }} className="content" />
         <section className="py-8">
           <Subscribe />
         </section>

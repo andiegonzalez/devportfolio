@@ -52,7 +52,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="md:py-8 p-0 hero">
+      <section className="sm:py-8 p-0 hero">
         <Image />
         <div className="inline-block md:ml-12">
           <h1 className="text-2xl md:text-4xl lg:text-6xl text-purple-700 font-extrabold">
@@ -68,22 +68,23 @@ const IndexPage = () => {
             <a
               href="https://drive.google.com/open?id=1BuRVceGGXAZhZ1xpbsAghaYFWCpSt4YO"
               target="_blank"
-              className="border-2 border-transparent focus:outline-none focus:border-purple-700 text-sm md:text-xl text-purple-700 hover:text-purple-900"
+              rel="noopener noreferrer"
+              className="border-2 border-transparent focus:outline-none focus:border-purple-700 text-lg sm:text-xl text-purple-700 hover:text-purple-900"
             >
               See my resume.
             </a>
           </p>
 
-          <div className="flex sm:justify-between">
+          <div className="flex flex-col sm:flex-row justify-between sm:justify-start">
             <p className="mr-3 my-2 text-2xl">Get in touch!</p>
             <Social color="purple" />
           </div>
         </div>
       </section>
-      <section className="py-8">
+      <section className="py-4 sm:py-8">
         <p className="text-xl">Some projects I've worked on.</p>
         <div
-          className="sm:my-10"
+          className="my-2 sm:my-10"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -100,13 +101,13 @@ const IndexPage = () => {
           ))}
         </div>
       </section>
-      <section className="py-8">
-        <p className="text-xl w-3/4">
+      <section className="py-4 sm:py-8">
+        <p className="text-xl sm:w-3/4">
           I'm also getting into the habit of writing with the goal of
           documenting my goals and progress and helping others.
         </p>
         <div
-          className="sm:my-10"
+          className="my-2 sm:my-10"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",

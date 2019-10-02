@@ -11,12 +11,18 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div>
+      <div className="">
         <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold">
           {frontmatter.title}
         </h1>
-        <h2 className="mb-4">{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <h2 className="mb-4 -mt-2">{frontmatter.date}</h2>
+        <div className="flex flex-row align-start">
+          <div
+            dangerouslySetInnerHTML={{ __html: html }}
+            className="content max-w-4xl mr-4"
+          />
+          <p>{frontmatter.description}</p>
+        </div>
         <section className="py-8">
           <a
             href={frontmatter.demo}
@@ -45,6 +51,7 @@ export const projectTemplateQuery = graphql`
         title
         demo
         repo
+        description
       }
     }
   }

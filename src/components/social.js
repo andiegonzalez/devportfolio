@@ -17,7 +17,10 @@ const Social = ({ color }) => {
       }
     }
   `)
-  const colorClass = color === "purple" ? "text-purple-700" : "text-white"
+  const colorClass =
+    color === "purple"
+      ? "text-purple-700 w-1/2 mx-auto sm:w-auto flex justify-between"
+      : "text-white w-1/3 sm:w-auto"
   const hoverClass =
     color === "purple" ? "hover:text-purple-900" : "hover:text-gray-200"
   const focusClass =
