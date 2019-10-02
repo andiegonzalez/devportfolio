@@ -2,8 +2,12 @@
 path: /projects/this-site
 date: 30 Sep 2019
 title: Andie Gonzalez's Dev Portfolio
-description: Portfolio & blog site designed form scratch developed with Gatsby & TailwindCSS.
+description: >-
+  Portfolio & blog site designed form scratch developed with Gatsby &
+  TailwindCSS.
 repo: github.com/andreagzz11/devportfolio
+demo: 'https://andiegonzalez.codes'
+thumb: /assets/screen-shot-2019-10-01-at-9.21.46-pm.png
 ---
 
 ## Objectives
