@@ -2,8 +2,12 @@
 path: /blog/its-alive
 date: 2 Oct 2019
 title: Finally...it's alive!
-description: After months of impostor syndrome, iterations & life in general, my corner of the internet is finally ready.
-thumb: /images/IMG_0107.jpg
+description: >-
+  After months of impostor syndrome, iterations & life in general, my corner of
+  the internet is finally ready.
+repo: '-'
+demo: '-'
+thumb: /assets/img_0107.jpg
 ---
 
 Hey stranger! Welcome to my little corner of the internet.
