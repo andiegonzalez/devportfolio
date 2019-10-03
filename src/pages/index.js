@@ -66,7 +66,7 @@ const IndexPage = () => {
             technologies including Vuejs, React, Express, HTML, CSS and vanilla
             JS, concentrating more on the front of the front-end.{" "}
             <a
-              href="https://drive.google.com/open?id=1BuRVceGGXAZhZ1xpbsAghaYFWCpSt4YO"
+              href="https://drive.google.com/open?id=1_0Au4P0rs5oEXs0WpBgaBL2E2xMjbs9p"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-transparent focus:outline-none focus:border-purple-700 text-lg sm:text-xl text-purple-700 hover:text-purple-900"

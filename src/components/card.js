@@ -38,7 +38,6 @@ const Card = ({ content, orientation, btnText }) => {
         <p className="px-2 pb-2 sm:px-4 sm:pb-4 text-sm">
           {content.frontmatter.description}
         </p>
-
         {!demo ? (
           <AniLink
             paintDrip
@@ -48,6 +47,13 @@ const Card = ({ content, orientation, btnText }) => {
           >
             {btnText}
           </AniLink>
+        ) : content.frontmatter.path === "/projects/stage" ? (
+          <a
+            className="rounded bg-purple-300 text-purple-900 font-bold py-1 px-4 mb-2 mr-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400 self-end"
+            href={content.frontmatter.path}
+          >
+            Read More
+          </a>
         ) : (
           <a
             className="rounded bg-purple-300 text-purple-900 font-bold py-1 px-4 mb-2 mr-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400 self-end"

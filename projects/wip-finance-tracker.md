@@ -4,7 +4,7 @@ date: 2 Oct 2019
 title: "WIP: Finance Tracker"
 description: "Personal finance, goal oriented web app developed with Gatsby."
 repo: "https://github.com/andreagzz11/intclient-gatsby"
-demo: financetracker-itesm.netlify.com
+demo: https://financetracker-itesm.netlify.com
 thumb: /assets/screen-shot-2019-10-01-at-9.30.03-pm.png
 ---
 

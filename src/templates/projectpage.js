@@ -20,20 +20,24 @@ export default function Template({ data }) {
           dangerouslySetInnerHTML={{ __html: html }}
           className="content max-w-6xl mx-auto"
         />
-        <section className="py-4">
-          <a
-            href={frontmatter.demo}
-            className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 sm:ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
-          >
-            Live Demo
-          </a>
-          <a
-            href={frontmatter.repo}
-            className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 sm:ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
-          >
-            Github Repo
-          </a>
-        </section>
+        {frontmatter.path === "/projects/stage" ? (
+          ""
+        ) : (
+          <section className="py-4">
+            <a
+              href={frontmatter.demo}
+              className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 sm:ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
+            >
+              Live Demo
+            </a>
+            <a
+              href={frontmatter.repo}
+              className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 sm:ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
+            >
+              Github Repo
+            </a>
+          </section>
+        )}
       </div>
     </Layout>
   )
