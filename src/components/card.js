@@ -13,7 +13,7 @@ const Card = ({ content, orientation, btnText }) => {
           navigate(content.frontmatter.path)
         }
       }}
-      className={`border-2 border-transparent focus:outline-none focus:border-purple-700 cursor-pointer shadow bg-white rounded flex max-h-72 ${
+      className={`border-2 border-transparent focus:outline-none focus:border-purple-700 cursor-pointer shadow hover:shadow-md bg-white rounded flex max-h-72 ${
         orientation === "horizontal"
           ? "flex-col justify-between"
           : "flex-col sm:flex-row justify-between"
@@ -32,7 +32,7 @@ const Card = ({ content, orientation, btnText }) => {
           orientation === "horizontal" ? "" : "sm:w-1/2"
         }`}
       >
-        <h3 className="p-2 sm:p-4 font-semibold">
+        <h3 className="px-2 pt-2 pb-1 sm:px-4 sm:pt-4 sm:pb-2 font-semibold">
           {content.frontmatter.title}
         </h3>
         <p className="px-2 pb-2 sm:px-4 sm:pb-4 text-sm">

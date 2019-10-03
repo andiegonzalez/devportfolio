@@ -1,7 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitter, faGithub, faDev } from "@fortawesome/free-brands-svg-icons"
+import {
+  faTwitter,
+  faGithub,
+  faDev,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 
 const Social = ({ color }) => {
   const data = useStaticQuery(graphql`
@@ -12,6 +17,7 @@ const Social = ({ color }) => {
             twitter
             github
             dev
+            linkedin
           }
         }
       }
@@ -63,6 +69,18 @@ const Social = ({ color }) => {
         href={data.site.siteMetadata.social.dev}
       >
         <FontAwesomeIcon icon={faDev} />
+      </a>
+      <a
+        className={`text-3xl border-2 border-transparent focus:outline-none ${focusClass} ${hoverClass} md:mx-2`}
+        style={{
+          textDecoration: `none`,
+        }}
+        target="_blank"
+        aria-label="Link to my Dev profile"
+        rel="noopener noreferrer"
+        href={data.site.siteMetadata.social.linkedin}
+      >
+        <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </div>
   )

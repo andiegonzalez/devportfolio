@@ -16,7 +16,10 @@ export default function Template({ data }) {
           {frontmatter.title}
         </h1>
         <h2 className="mb-4 -mt-2">{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} className="content" />
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+          className="content max-w-6xl mx-auto"
+        />
         <section className="py-8">
           <Subscribe />
         </section>

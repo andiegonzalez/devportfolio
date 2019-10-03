@@ -6,7 +6,7 @@ description: >-
   Portfolio & blog site designed form scratch developed with Gatsby &
   TailwindCSS.
 repo: github.com/andreagzz11/devportfolio
-demo: 'https://andiegonzalez.codes'
+demo: "https://andiegonzalez.codes"
 thumb: /assets/screen-shot-2019-10-01-at-9.21.46-pm.png
 ---
 
@@ -41,4 +41,3 @@ Other goals I had in order to build this was to have a corner of the internet in
 ## Explore the Source Code
 
 I you would like to deep dive into the code of this website you can go directly to the Github repository with the link below.
-<a href="https://github.com/andreagzz11/devportfolio" rel="noopener noreferrer" target="_blank">Github Repository</a>

@@ -29,8 +29,8 @@ const Image = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      alt=""
-      className="h-70 sm:block hidden w-full"
+      alt="Profile Picture"
+      className="h-70 sm:block hidden w-full rounded-full shadow-lg"
     />
   )
 }

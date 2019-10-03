@@ -20,7 +20,7 @@ const Header = ({ siteDescription, siteAuthor }) => (
         paintDrip
         to="/projects"
         color="rebeccapurple"
-        className="ml-5 p-1 border-2 border-transparent focus:outline-none focus:border-purple-700 text-lg sm:text-xl"
+        className="ml-5 p-1 border-2 border-transparent focus:outline-none focus:border-purple-700 text-xl sm:text-2xl"
       >
         projects
       </AniLink>
@@ -28,7 +28,7 @@ const Header = ({ siteDescription, siteAuthor }) => (
         paintDrip
         to="/blog"
         color="rebeccapurple"
-        className="ml-5 p-1 border-2 border-transparent focus:outline-none focus:border-purple-700 text-lg sm:text-xl"
+        className="ml-5 p-1 border-2 border-transparent focus:outline-none focus:border-purple-700 text-xl sm:text-2xl"
       >
         blog
       </AniLink>

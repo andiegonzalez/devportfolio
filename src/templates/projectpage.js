@@ -16,23 +16,20 @@ export default function Template({ data }) {
           {frontmatter.title}
         </h1>
         <h2 className="mb-4 -mt-2">{frontmatter.date}</h2>
-        <div className="flex flex-row align-start">
-          <div
-            dangerouslySetInnerHTML={{ __html: html }}
-            className="content max-w-4xl mr-4"
-          />
-          <p>{frontmatter.description}</p>
-        </div>
-        <section className="py-8">
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+          className="content max-w-6xl mx-auto"
+        />
+        <section className="py-4">
           <a
             href={frontmatter.demo}
-            className="rounded bg-purple-700 text-white py-1 px-4 ml-2 hover:bg-purple-900 focus:outline-none focus:bg-purple-900"
+            className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 sm:ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
           >
             Live Demo
           </a>
           <a
             href={frontmatter.repo}
-            className="rounded bg-purple-700 text-white py-1 px-4 ml-2 hover:bg-purple-900 focus:outline-none focus:bg-purple-900"
+            className="rounded bg-purple-300 text-purple-900 font-bold py-2 px-4 sm:ml-2 hover:bg-purple-400 focus:outline-none focus:bg-purple-400"
           >
             Github Repo
           </a>
@@ -48,6 +45,7 @@ export const projectTemplateQuery = graphql`
       frontmatter {
         date
         path
+        thumb
         title
         demo
         repo

@@ -2,3 +2,8 @@ body {
   @apply font-body;
   background-color: #fffdfa;
 }
+
+div,
+a {
+  transition: all 0.2 ease;
+}

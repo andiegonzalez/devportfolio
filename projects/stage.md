@@ -3,11 +3,11 @@ path: /projects/stage
 date: 20 June 2019
 title: Proyected Stage
 description: >-
-  This platform allows you to have your own organization, in which you can
+  This platform allows you to have your own organization,
   create and manage projects and invite team members to assign tasks inside a
   given project.
-repo: '-'
-demo: '-'
+repo: "-"
+demo: "-"
 thumb: /assets/screen-shot-2019-08-15-at-4.33.12-pm.png
 ---
 

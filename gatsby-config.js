@@ -7,6 +7,7 @@ module.exports = {
       twitter: `https://twitter.com/andreagzz11`,
       github: `http://github.com/andreagzz11`,
       dev: `https://dev.to/andreagzz11`,
+      linkedin: `https://linkedin.com/andreagonzalez11`,
     },
   },
   plugins: [
