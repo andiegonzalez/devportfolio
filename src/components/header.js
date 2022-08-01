@@ -32,6 +32,14 @@ const Header = ({ siteDescription, siteAuthor }) => (
       >
         blog
       </AniLink>
+      <AniLink
+        paintDrip
+        to="/chronicles"
+        color="rebeccapurple"
+        className="ml-5 p-1 border-2 border-transparent focus:outline-none focus:border-purple-700 text-xl sm:text-2xl"
+      >
+        The Chronicles of Getting it Together
+      </AniLink>
       {/*<div className="flex flex-col">
         <a href="">ENG</a>
         <a href="">ESP</a>
