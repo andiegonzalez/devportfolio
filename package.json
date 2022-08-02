@@ -10,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^3.2.1",
+    "gatsby-cli": "^4.19.0",
     "gatsby-image": "^3.2.0",
     "gatsby-plugin-manifest": "^3.2.0",
     "gatsby-plugin-netlify-cms": "^5.2.0",
@@ -32,8 +33,12 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "postcss": "^8.4.14",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.1.1"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   },
   "keywords": [
     "gatsby"

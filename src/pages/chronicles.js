@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Card from "../components/card"
 import SEO from "../components/seo"
 
-const BlogPage = () => {
+const ChroniclesPage = () => {
   const data = useStaticQuery(graphql`
     query chroniclesInfo {
       allMarkdownRemark(
@@ -24,9 +24,10 @@ const BlogPage = () => {
     }
   `)
   const blogs = data.allMarkdownRemark.nodes
+  console.log(blogs)
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Chronicles" />
       <h1 className="text-2xl md:text-4xl lg:text-5xl text-purple-700 font-extrabold text-center">
         The Chronicles of Getting it Together
       </h1>
@@ -53,4 +54,4 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export default ChroniclesPage

@@ -12,6 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   const projectsTemplate = path.resolve(`src/templates/projectpage.js`)
   const blogPostTemplate = path.resolve(`src/templates/blogtemplate.js`)
+  const chroniclePostTemplate = path.resolve(`src/templates/blogtemplate.js`)
 
   return graphql(`
     {
@@ -37,8 +38,19 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      chronicles: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/chronicles/**.md" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
@@ -53,6 +65,14 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
+    result.data.chronicles.edges.forEach(({ node }) => {
+      console.log(node)
+      createPage({
+        path: node.frontmatter.path,
+        component: chroniclePostTemplate,
         context: {}, // additional data can be passed via context
       })
     })

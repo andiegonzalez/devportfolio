@@ -27,6 +27,7 @@ module.exports = {
             },
           ],
         },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,6 +48,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blogs`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `chronicles`,
+        path: `${__dirname}/chronicles`,
       },
     },
     `gatsby-transformer-sharp`,

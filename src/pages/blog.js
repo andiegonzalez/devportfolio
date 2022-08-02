@@ -39,7 +39,7 @@ const BlogPage = () => {
             gridGap: "1rem",
           }}
         >
-          {blogs.map(post => (
+          {blogs.map((post) => (
             <Card
               content={post}
               key={post.id}
