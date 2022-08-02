@@ -15,17 +15,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Poppins`,
-            variants: [`400`, `700`, `800`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`400`, `700`],
-          },
-        ],
-      },
+        fonts: {
+          google: [
+            {
+              family: `Poppins`,
+              variants: [`400`, `700`, `800`],
+            },
+            {
+              family: `Roboto`,
+              variants: [`400`, `700`],
+            },
+          ],
+        },
     },
     {
       resolve: `gatsby-source-filesystem`,
