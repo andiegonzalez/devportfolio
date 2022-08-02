@@ -24,7 +24,6 @@ const ChroniclesPage = () => {
     }
   `)
   const blogs = data.allMarkdownRemark.nodes
-  console.log(blogs)
   return (
     <Layout>
       <SEO title="Chronicles" />
